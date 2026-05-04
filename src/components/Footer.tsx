@@ -39,17 +39,18 @@ export function Footer() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-10 mb-12">
           <div className="col-span-2 md:col-span-1">
             <Wordmark variant="dark" />
-            <p className="mt-4 text-sm text-[#7A6555] leading-relaxed max-w-[200px]">
+            {/* #B8A090 on #1A1008 is sufficient contrast for small descriptive text */}
+            <p className="mt-4 text-sm text-[#B8A090] leading-relaxed max-w-[200px]">
               Akutt hjelp, kort ventetid og kveldsbehandling.
             </p>
-            <p className="mt-4 text-xs text-[#5A4B3C]">
+            <p className="mt-4 text-xs text-[#B8A090]">
               Skårersletta 10, 1473 Lørenskog
             </p>
           </div>
 
           {links.map((col) => (
             <div key={col.title}>
-              <p className="text-xs font-mono uppercase tracking-[0.12em] text-[#5A4B3C] mb-4">
+              <p className="text-xs font-mono uppercase tracking-[0.12em] text-[#D4A373] mb-4">
                 {col.title}
               </p>
               <ul className="space-y-2">
@@ -57,7 +58,7 @@ export function Footer() {
                   <li key={label}>
                     <a
                       href={href}
-                      className="text-sm text-[#7A6555] hover:text-[#D4A373] transition-colors"
+                      className="text-sm text-[#B8A090] hover:text-[#D4A373] transition-colors"
                     >
                       {label}
                     </a>
@@ -69,10 +70,10 @@ export function Footer() {
         </div>
 
         <div className="border-t border-[#3D2C1E] pt-6 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3">
-          <p className="text-xs text-[#5A4B3C]">
+          <p className="text-xs text-[#B8A090]">
             © {new Date().getFullYear()} Lørenskog Tannlegesenter. Alle rettigheter forbeholdes.
           </p>
-          <p className="text-xs text-[#3D2C1E]">
+          <p className="text-xs text-[#5A4B3C]">
             Nettside av Medcom
           </p>
         </div>
