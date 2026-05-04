@@ -31,7 +31,7 @@ export function Nav() {
         }`}
       >
         <div className="container mx-auto px-4 md:px-6">
-          <div className="flex items-center justify-between h-16 md:h-18">
+          <div className="flex items-center justify-between h-16 md:h-20">
             <Wordmark variant="light" className="shrink-0" />
 
             {/* Desktop nav */}
@@ -48,12 +48,14 @@ export function Nav() {
             </nav>
 
             <div className="flex items-center gap-3">
-              {/* Phone — always visible */}
+              {/* Phone — always visible on desktop */}
               <a
                 href="tel:+4767904090"
                 className="hidden sm:flex items-center gap-2 font-mono text-sm font-medium text-[#8B5A3C] hover:text-[#6B3A1C] transition-colors"
               >
-                <span className="text-xs">☎</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.01 2.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z" />
+                </svg>
                 67 90 40 90
               </a>
 
@@ -68,13 +70,13 @@ export function Nav() {
               <button
                 className="md:hidden flex flex-col gap-[5px] p-2"
                 onClick={() => setMenuOpen(!menuOpen)}
-                aria-label="Meny"
+                aria-label={menuOpen ? 'Lukk meny' : 'Åpne meny'}
               >
                 <span
                   className={`block w-5 h-0.5 bg-[#1A1008] transition-all duration-200 ${menuOpen ? 'rotate-45 translate-y-[7px]' : ''}`}
                 />
                 <span
-                  className={`block w-5 h-0.5 bg-[#1A1008] transition-all duration-200 ${menuOpen ? 'opacity-0' : ''}`}
+                  className={`block w-5 h-0.5 bg-[#1A1008] transition-all duration-200 ${menuOpen ? 'opacity-0 scale-x-0' : ''}`}
                 />
                 <span
                   className={`block w-5 h-0.5 bg-[#1A1008] transition-all duration-200 ${menuOpen ? '-rotate-45 -translate-y-[7px]' : ''}`}
@@ -93,7 +95,7 @@ export function Nav() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.2 }}
-            className="fixed inset-0 z-40 bg-[#FAF6F0] pt-16 px-6 flex flex-col"
+            className="fixed inset-0 z-40 bg-[#FAF6F0] pt-16 px-6 flex flex-col overflow-y-auto"
           >
             <nav className="flex flex-col gap-1 mt-8">
               {navLinks.map((link) => (
@@ -107,7 +109,7 @@ export function Nav() {
                 </a>
               ))}
             </nav>
-            <div className="mt-8 flex flex-col gap-3">
+            <div className="mt-8 flex flex-col gap-3 pb-10">
               <a
                 href="tel:+4767904090"
                 className="flex items-center justify-center gap-2 w-full py-4 rounded-2xl border-2 border-[#8B5A3C] text-[#8B5A3C] font-semibold text-lg"
