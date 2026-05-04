@@ -147,7 +147,7 @@ export function Priser() {
           className="mt-8 text-xs text-[#7A6555] max-w-xl"
         >
           Avbestilling: senest 24 timer før time. Ved avbestilling kortere varsel belastes 75% av honoraret
-          (1 500 kr/time). Prisene er veiledende — du får alltid eksakt pris ved konsultasjon.
+          (1 500 kr/time). Prisene er veiledende. Du får alltid eksakt pris ved konsultasjon.
         </motion.p>
 
         <motion.div

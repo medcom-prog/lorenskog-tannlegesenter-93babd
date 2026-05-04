@@ -65,7 +65,7 @@ export function OmOss() {
             </p>
             <p className="text-[#3D2C1E] leading-relaxed mb-8">
               Vi tilbyr kvelds- og helgetimer og tar gjerne imot nye pasienter.
-              Målet vårt er fornøyde pasienter — det søker vi å oppnå ved
+              Målet vårt er fornøyde pasienter. Det søker vi å oppnå ved
               kvalitet i alle deler av tannbehandlingen.
             </p>
 
