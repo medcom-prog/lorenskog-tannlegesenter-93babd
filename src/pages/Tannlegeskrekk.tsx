@@ -58,7 +58,7 @@ export default function Tannlegeskrekk() {
               src="/images/try-tannlegeskrekk.jpeg"
               alt="Trygg behandling for pasienter med tannlegeskrekk"
               loading="eager"
-              className="w-full aspect-[16/8] md:aspect-[16/6] object-cover transition-transform duration-1000 ease-out hover:scale-[1.02]"
+              className="w-full aspect-[16/9] md:aspect-[16/7] object-cover object-[center_30%] transition-transform duration-1000 ease-out hover:scale-[1.02] [filter:saturate(1.05)_contrast(1.02)]"
             />
           </motion.figure>
         </Container>

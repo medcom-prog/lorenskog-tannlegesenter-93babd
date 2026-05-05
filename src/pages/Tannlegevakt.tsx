@@ -165,7 +165,7 @@ export default function Tannlegevakt() {
                 src="/images/try-undersokelse.jpeg"
                 alt="Lørenskog Tannlegevakt — klinikk"
                 loading="lazy"
-                className="w-full aspect-[4/3] object-cover transition-transform duration-1000 ease-out hover:scale-[1.04]"
+                className="w-full aspect-[4/3] object-cover transition-transform duration-1000 ease-out hover:scale-[1.04] [filter:saturate(1.08)_contrast(1.05)]"
               />
             </motion.figure>
           </div>

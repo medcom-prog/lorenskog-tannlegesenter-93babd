@@ -47,7 +47,7 @@ export default function OmOss() {
                 src="/images/om-oss.jpeg"
                 alt="Lørenskog Tannlegesenter — møte med behandler"
                 loading="eager"
-                className="w-full aspect-[4/5] object-cover transition-transform duration-1000 ease-out hover:scale-[1.04]"
+                className="w-full aspect-[4/5] object-cover transition-transform duration-1000 ease-out hover:scale-[1.04] [filter:saturate(1.08)_contrast(1.04)_brightness(0.98)]"
               />
             </motion.figure>
 

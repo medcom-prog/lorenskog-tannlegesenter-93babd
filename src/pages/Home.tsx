@@ -20,12 +20,13 @@ export default function Home() {
           src="/images/hero-treatment.jpeg"
           alt="Tannbehandling — Lørenskog Tannlegesenter"
           className="absolute inset-0 w-full h-full object-cover"
-          initial={{ scale: 1.06 }}
-          animate={{ scale: 1.0 }}
-          transition={{ duration: 2.4, ease: [0.22, 1, 0.36, 1] }}
+          initial={{ scale: 1.08, opacity: 0 }}
+          animate={{ scale: 1.0, opacity: 1 }}
+          transition={{ duration: 2.6, ease: [0.22, 1, 0.36, 1] }}
         />
-        {/* Gradient — top edges fade for nav legibility */}
-        <div className="absolute inset-0 bg-gradient-to-b from-ink/55 via-ink/15 to-ink/75" />
+        {/* Gradient — left for text legibility, top fades for nav, bottom anchor */}
+        <div className="absolute inset-0 bg-gradient-to-r from-ink/70 via-ink/40 to-ink/30" />
+        <div className="absolute inset-0 bg-gradient-to-b from-ink/40 via-transparent to-ink/65" />
         <Container size="xl" className="relative z-10 pb-16 md:pb-24">
           <Eyebrow tone="bg" number="—">{t.home.heroEyebrow}</Eyebrow>
           <SplitText
@@ -68,6 +69,21 @@ export default function Home() {
             </a>
           </motion.div>
         </Container>
+
+        {/* Scroll indicator — CSS-animated line */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.6, delay: 1.6, ease: 'easeOut' }}
+          className="absolute bottom-6 left-1/2 -translate-x-1/2 z-10 hidden md:flex flex-col items-center gap-2 text-bg/60"
+          aria-hidden
+        >
+          <style>{`@keyframes scroll-hint { 0%, 100% { transform: scaleY(0.4); transform-origin: top; } 50% { transform: scaleY(1); transform-origin: top; } }`}</style>
+          <span className="font-mono text-[9px] uppercase tracking-[0.3em]">Scroll</span>
+          <span
+            className="block h-7 w-px bg-bg/50 motion-safe:[animation:scroll-hint_2s_ease-in-out_infinite]"
+          />
+        </motion.div>
       </section>
 
       {/* Smart-routing triage — line icons, NO emojis */}
@@ -209,7 +225,7 @@ export default function Home() {
                 src="/images/om-oss.jpeg"
                 alt="Lørenskog Tannlegesenter — pasient-omsorg"
                 loading="lazy"
-                className="w-full aspect-[4/5] object-cover transition-transform duration-1000 ease-out hover:scale-[1.04]"
+                className="w-full aspect-[4/5] object-cover transition-transform duration-1000 ease-out hover:scale-[1.04] [filter:saturate(1.08)_contrast(1.04)_brightness(0.98)]"
               />
             </motion.figure>
 
