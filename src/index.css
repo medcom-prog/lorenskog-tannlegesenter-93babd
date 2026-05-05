@@ -2,37 +2,73 @@
 @tailwind components;
 @tailwind utilities;
 
-:root { color-scheme: light; }
+@layer base {
+  :root {
+    color-scheme: light;
+    --color-bg: #FAF6F0;
+    --color-ink: #1A1008;
+    --color-brand: #8B5A3C;
+    --color-accent: #D4A373;
+  }
 
-html { scroll-behavior: smooth; }
+  /* No global smooth scroll — route changes should be instant */
+  html {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
 
-body {
-  background-color: #FAF6F0;
-  color: #1A1008;
-  font-family: 'Instrument Sans', system-ui, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  body {
+    background-color: #FAF6F0;
+    color: #1A1008;
+    font-family: 'Instrument Sans', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background-color: #D4A373;
+    color: #1A1008;
+  }
+
+  :focus-visible {
+    outline: 2px solid #8B5A3C;
+    outline-offset: 2px;
+    border-radius: 8px;
+  }
+
+  button, a {
+    -webkit-tap-highlight-color: rgba(139, 90, 60, 0.12);
+  }
+
+  @media (hover: none) and (pointer: coarse) {
+    button, a {
+      min-height: 44px;
+      min-width: 44px;
+    }
+  }
 }
 
-::selection {
-  background-color: #D4A373;
-  color: #1A1008;
-}
+@layer utilities {
+  .font-display {
+    font-family: 'Instrument Serif', Georgia, serif;
+  }
+  .font-mono {
+    font-family: 'Geist Mono', 'JetBrains Mono', ui-monospace, monospace;
+  }
+  .prose-clinic {
+    max-width: 65ch;
+    font-size: clamp(1rem, 1.4vw, 1.0625rem);
+    line-height: 1.7;
+  }
+  .no-scrollbar::-webkit-scrollbar { display: none; }
+  .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
 
-:focus-visible {
-  outline: 2px solid #8B5A3C;
-  outline-offset: 2px;
-  border-radius: 8px;
+  @media (prefers-reduced-motion: reduce) {
+    *, ::before, ::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
 }
-button:focus-visible, a:focus-visible { outline-offset: 3px; }
-
-/* font-display utility for Instrument Serif */
-.font-display {
-  font-family: 'Instrument Serif', Georgia, serif;
-}
-.font-mono {
-  font-family: 'Geist Mono', 'JetBrains Mono', ui-monospace, monospace;
-}
-
-.no-scrollbar::-webkit-scrollbar { display: none; }
-.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
