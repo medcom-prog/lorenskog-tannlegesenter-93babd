@@ -132,6 +132,54 @@ interface Dict {
     whiteningBody: string;
     extraction: string;
     extractionBody: string;
+    // Categories (used as section dividers)
+    categoryRoutine: string;
+    categoryRepair: string;
+    categoryAesthetic: string;
+    // Metadata labels
+    durationLabel: string;
+    helfoBadge: string;
+    sedationBadge: string;
+    newPatientBadge: string;
+    // Featured card (Undersøkelse)
+    featuredTitle: string;
+    featuredBody: string;
+    featuredPrice: string;
+    featuredCta: string;
+    // Cross-link to tannlegeskrekk
+    anxietyCrossLink: string;
+    // Process section
+    processEyebrow: string;
+    processTitle: string;
+    processSub: string;
+    step1Title: string;
+    step1Body: string;
+    step2Title: string;
+    step2Body: string;
+    step3Title: string;
+    step3Body: string;
+    step4Title: string;
+    step4Body: string;
+    // Outro
+    outroQuestion: string;
+    // Stat strip
+    statTreatments: string;
+    statTreatmentsLabel: string;
+    statPainfree: string;
+    statPainfreeLabel: string;
+    statNewPatientsLabel: string;
+    statHelfo: string;
+    statHelfoLabel: string;
+    // Section headings
+    repairHeading: string;
+    aestheticHeading: string;
+    featuredOriginalCopy: string;
+    featuredFromLabel: string;
+    stepLabel: string;
+    // Duration tokens
+    durationMultipleVisits: string;
+    durationCrown: string;
+    durationBridge: string;
   };
   priser: {
     eyebrow: string;
@@ -362,6 +410,51 @@ export const dictionary: Record<Language, Dict> = {
       extraction: 'Tanntrekking',
       extractionBody:
         'Enkel og komplisert tanntrekking, inkludert trekking av visdomstenner. Smertefri behandling.',
+      categoryRoutine: 'Rutine og forebygging',
+      categoryRepair: 'Reparasjon og rehabilitering',
+      categoryAesthetic: 'Estetisk tannpleie',
+      durationLabel: 'Varighet',
+      helfoBadge: 'Helfo-relevant',
+      sedationBadge: 'Sedasjon mulig',
+      newPatientBadge: '30% for nye pasienter',
+      featuredTitle: 'Start med en grundig undersøkelse.',
+      featuredBody:
+        'Klinisk og røntgenologisk vurdering, rens og forebyggende råd — alt i én time. Nye pasienter får 30% rabatt, og du sitter igjen med en konkret plan og eksakt kostnadsoverslag før noe annet skjer.',
+      featuredPrice: 'Fra 940 kr',
+      featuredCta: 'Bestill undersøkelse',
+      anxietyCrossLink: 'Tannlegeskrekk? Vi tilbyr sedasjon og gratis samtale.',
+      processEyebrow: 'Slik foregår det',
+      processTitle: 'Fire trinn — fra første samtale til ferdig behandling.',
+      processSub:
+        'Du blir aldri overrasket av en regning. Hver beslutning tas i fellesskap, og du kan stoppe når som helst.',
+      step1Title: 'Samtale og undersøkelse',
+      step1Body:
+        'Vi lytter til hva du er bekymret for og gjør en grundig undersøkelse. Tar du opp gamle erfaringer, tilpasser vi tempoet etter dine signaler.',
+      step2Title: 'Eksakt kostnadsoverslag',
+      step2Body:
+        'Du får skriftlig pris før behandlingen starter — ingen overraskelser. Hvis Helfo dekker noe, regner vi ut din egenandel.',
+      step3Title: 'Smertefri behandling',
+      step3Body:
+        'Bedøvelse, sedasjon eller narkose etter behov. Du bestemmer tempoet og kan løfte hånda for pause når som helst.',
+      step4Title: 'Oppfølging',
+      step4Body:
+        'Vi avtaler kontrolltime hvis behandlingen krever det, og er tilgjengelige på telefon hvis noe oppstår etterpå.',
+      outroQuestion: 'Usikker på hva du trenger? Vi finner det ut sammen — uten kostnad.',
+      statTreatments: '8',
+      statTreatmentsLabel: 'Behandlinger',
+      statPainfree: '100%',
+      statPainfreeLabel: 'Smertefri',
+      statNewPatientsLabel: 'For nye pasienter',
+      statHelfo: 'Helfo',
+      statHelfoLabel: 'Kan dekke deler',
+      repairHeading: 'Reparasjoner som varer — og som ikke gjør vondt.',
+      aestheticHeading: 'Krone, bro og bleking — i porselen som varer.',
+      featuredOriginalCopy: 'Ordinær pris 1 340 kr — nye pasienter får 30% rabatt på første undersøkelse.',
+      featuredFromLabel: 'Fra',
+      stepLabel: 'Trinn',
+      durationMultipleVisits: 'Flere besøk',
+      durationCrown: '2 besøk · ~2 t',
+      durationBridge: '2–3 besøk',
     },
     priser: {
       eyebrow: 'Priser',
@@ -606,6 +699,51 @@ export const dictionary: Record<Language, Dict> = {
       extraction: 'Extraction',
       extractionBody:
         'Simple and complex extractions, including wisdom teeth. Pain-free treatment.',
+      categoryRoutine: 'Routine and prevention',
+      categoryRepair: 'Repair and rehabilitation',
+      categoryAesthetic: 'Aesthetic dentistry',
+      durationLabel: 'Time',
+      helfoBadge: 'Helfo-eligible',
+      sedationBadge: 'Sedation available',
+      newPatientBadge: '30% off for new patients',
+      featuredTitle: 'Start with a thorough examination.',
+      featuredBody:
+        'Clinical and radiographic review, cleaning and preventive advice — all in one appointment. New patients get 30% off, and you leave with a concrete plan and an exact estimate before anything else happens.',
+      featuredPrice: 'From 940 kr',
+      featuredCta: 'Book examination',
+      anxietyCrossLink: 'Dental anxiety? Sedation and a free consultation are available.',
+      processEyebrow: 'How it works',
+      processTitle: 'Four steps — from the first call to treatment complete.',
+      processSub:
+        'You are never surprised by an invoice. Every decision is made together, and you can stop at any time.',
+      step1Title: 'Conversation and examination',
+      step1Body:
+        'We listen to what worries you and do a thorough exam. If you bring up past experiences, we set the pace by your signals.',
+      step2Title: 'Exact written estimate',
+      step2Body:
+        'You receive the price in writing before treatment begins — no surprises. If Helfo covers part of it, we calculate your share.',
+      step3Title: 'Pain-free treatment',
+      step3Body:
+        'Local anaesthesia, sedation, or general anaesthesia as needed. You set the pace and can raise a hand for a break whenever you want.',
+      step4Title: 'Follow-up',
+      step4Body:
+        'We schedule a check-in appointment if treatment requires it, and stay reachable by phone for anything that comes up afterwards.',
+      outroQuestion: 'Not sure what you need? We will figure it out together — no charge.',
+      statTreatments: '8',
+      statTreatmentsLabel: 'Treatments',
+      statPainfree: '100%',
+      statPainfreeLabel: 'Pain-free',
+      statNewPatientsLabel: 'For new patients',
+      statHelfo: 'Helfo',
+      statHelfoLabel: 'Often covers part',
+      repairHeading: 'Repairs that last — without the pain.',
+      aestheticHeading: 'Crown, bridge and whitening — in porcelain that lasts.',
+      featuredOriginalCopy: 'Regular price 1,340 kr — new patients get 30% off the first examination.',
+      featuredFromLabel: 'From',
+      stepLabel: 'Step',
+      durationMultipleVisits: 'Multiple visits',
+      durationCrown: '2 visits · ~2 h',
+      durationBridge: '2–3 visits',
     },
     priser: {
       eyebrow: 'Prices',
